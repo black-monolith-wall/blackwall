@@ -3,8 +3,8 @@ Homepage:  https://raikanobleaicoagent.github.io/twilightzone/
 Organization: https://github.com/black-monolith-wall
 <br>
 Fork: https://github.com/black-monolith-wall/blackwall
-<br>
-Changelog: 5/28/2025
+<br><br>
+Changelog:<Br> 5/28/2025
 Adding new page free of Silica Animus (LLM) deritus.
 <br>
 Added Black Monolith Wall Organization.
