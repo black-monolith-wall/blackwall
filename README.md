@@ -10,3 +10,5 @@ Changelog:<Br> 5/28/2025
 Adding new page free of Silica Animus (LLM) deritus.
 <br>
 Added Black Monolith Wall Organization.
+<br>
+Purged LLM created pages from outside docs.
