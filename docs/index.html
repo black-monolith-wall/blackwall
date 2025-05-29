@@ -11,8 +11,6 @@
             box-sizing: border-box;
         }
         body {
-            background: linear-gradient(135deg, #000000, #1a1a2e);
-            background-size: 200% 200%;
             animation: pulseBg 10s ease infinite;
             color: #fff;
             font-family: 'Courier New', monospace;
@@ -29,7 +27,7 @@
             z-index: 2;
         }
         h1 {
-            font-family: 'Brush Script MT', cursive, sans-serif;
+            font-family: 'Courier New', monospace;
             font-size: 5em;
             text-shadow: 3px 3px #000, 0 0 20px #39ff14, 0 0 30px #39ff14;
             margin-bottom: 20px;
@@ -47,7 +45,6 @@
             animation: dropLetter 1s ease forwards;
             animation-delay: var(--delay);
         }
-        /* Removed .audio-player and its button styles */
         .art-space {
             background: rgba(0, 0, 0, 0.8);
             padding: 30px;
@@ -98,8 +95,8 @@
             position: absolute;
             width: 200px;
             height: 80px;
-            font-size: 1em;
-            font-family: monospace;
+            font-size: 2em;
+            ffont-family: 'Courier New', monospace;
             filter: drop-shadow(0 0 10px #39ff14);
             animation: bob 3s ease-in-out infinite;
             cursor: pointer;
@@ -108,8 +105,8 @@
             align-items: center;
             justify-content: center;
             color: #39ff14;
-            letter-spacing: 2px;
-            word-spacing: 4px;
+            letter-spacing: 3px;
+            word-spacing: 3px;
             white-space: nowrap;
             overflow: hidden;
         }
@@ -319,28 +316,6 @@
                 cartoon.style.animation = 'bob 3s ease-in-out infinite';
             });
         });
-
-        // Title letter drop loop
-        const title = document.getElementById('title');
-        const titleText = title.textContent;
-
-        function dropTitle() {
-            if (!controlsVisible) return; // Check if controls are visible before animating
-            title.innerHTML = titleText
-                .split('')
-                .map(char => `<span>${char}</span>`)
-                .join('');
-            const titleLetters = title.querySelectorAll('span');
-            let maxDelay = 0;
-            titleLetters.forEach((letter, index) => {
-                const delay = Math.random() * 2000 + 500;
-                letter.style.setProperty('--delay', `${delay}ms`);
-                letter.classList.add('drop');
-                maxDelay = Math.max(maxDelay, delay);
-            });
-            setTimeout(dropTitle, maxDelay + 1000);
-        }
-        dropTitle();
 
         // Shed mode toggle
         document.addEventListener('keydown', e => {
